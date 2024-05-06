@@ -15,6 +15,7 @@ The program is able to send 3 kind of phishing emails
 - Bank
 - Atalasian
 - OneDrive
+- Zones to rent an office
 
 And developing...
 

@@ -363,8 +363,8 @@ def AtalassianEs():
                     </div>
                    """.format(currentDate,userEmail,userName,userEmail))
     fileNameHtml=userName+"Atalasian.html"
-    htmlFile=open(fileNameHtml,"w")
-    htmlFile.write("./reportFolder/"+atalasianHtml)
+    htmlFile=open("./reportFolder/"+fileNameHtml,"w")
+    htmlFile.write(atalasianHtml)
     htmlFile.close()
     print("HTML creado y preparado para enviar")
     getPath()
