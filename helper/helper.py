@@ -18,3 +18,6 @@ def generateFolderReport():
     else:
         print(f"Folder " + reportsFolder + " already exists")
 
+def sendMensageToVictim():
+    # Process of send to the victim the template generated
+    print("\n Starting process to send the template selectedto the victim\n")

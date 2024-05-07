@@ -13,7 +13,7 @@ def AtalassianEs():
     userEmail=("Introduce el email de la victima-->")
     
     date=time.localtime()
-    currentDate=time.strftime("%H:%M:%S , %",date)
+    currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)
     
     ##HTML que se enviara a la victima
     atalasianHtml=("""
@@ -220,7 +220,7 @@ def AtalassianEs():
                                                           "
                                                         >
                                                           <a
-                                                            href="https://id.atlassian.com/login/changepassword?continue=https%3A%2F%2Fwww.atlassian.com%2Fgateway%2Fapi%2Fstart%2Fauthredirect&amp;signature=eyJraWQiOiJtaWNyb3MvYWlkLWFjY291bnQvOTlkYmc1ZDA3aXJwZXF1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJndWlsbGVybW9hYzIyQGdtYWlsLmNvbSIsImF1ZCI6Imxpbmstc2lnbmF0dXJlLXZhbGlkYXRvciIsIm5iZiI6MTcxNDk3NzgwNCwic2NvcGUiOiJjaGFuZ2VQYXNzd29yZCIsImlzcyI6Im1pY3Jvcy9haWQtYWNjb3VudCIsImV4cCI6MTcxNDk4MTQwNCwidXNlcklkIjoiNWE3YzA2M2E0YjAzZGQ1N2IwMWE3MTA0IiwiaWF0IjoxNzE0OTc3ODA0LCJqdGkiOiI1MDY3NzZlNC02MzFkLTQyNjktOGJmZi03YmFiZmU0YzE0MDYifQ.SHp_IGC25eHdsxvIYis1E9GV4FJC-aAC58_uVllKpOlRwycHyVZXx8So82n5EDE-UxAeDvU-nb1uP3AtLEEv3cgewBIxIXkgw2v6aYUAG1GW0clllNwRJp3GHhQGVb6562yXizx-KCzI33pmGq0EhPBQ8urdDTtHl3HWSZBRqNFEglZiolJCmznemuLK0yNfdaX04lOXkt87v9Wlf2awjSZi2AYlwiqnSgWEJEqcljZSGc5K2JSHybtf_LsWJOhq6szoWCz0sJSLyD6gMnzS-Qqdq7t8eszuBSoZLfn1uZ1hnrVPe-sIPYSwq6DsDHy_JZqUdVL4Dmnr82oeOITJaQ&amp;source=9607060d97aac19f42cc5c59b0ec4a1d"
+                                                            href="{}"
                                                             style="
                                                               box-sizing: border-box;
                                                               border-radius: 3px;
@@ -241,7 +241,7 @@ def AtalassianEs():
                                                               color: #ffffff;
                                                             "
                                                             target="_blank"
-                                                            data-saferedirecturl="https://www.google.com/url?hl=es&amp;q=https://id.atlassian.com/login/changepassword?continue%3Dhttps%253A%252F%252Fwww.atlassian.com%252Fgateway%252Fapi%252Fstart%252Fauthredirect%26signature%3DeyJraWQiOiJtaWNyb3MvYWlkLWFjY291bnQvOTlkYmc1ZDA3aXJwZXF1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJndWlsbGVybW9hYzIyQGdtYWlsLmNvbSIsImF1ZCI6Imxpbmstc2lnbmF0dXJlLXZhbGlkYXRvciIsIm5iZiI6MTcxNDk3NzgwNCwic2NvcGUiOiJjaGFuZ2VQYXNzd29yZCIsImlzcyI6Im1pY3Jvcy9haWQtYWNjb3VudCIsImV4cCI6MTcxNDk4MTQwNCwidXNlcklkIjoiNWE3YzA2M2E0YjAzZGQ1N2IwMWE3MTA0IiwiaWF0IjoxNzE0OTc3ODA0LCJqdGkiOiI1MDY3NzZlNC02MzFkLTQyNjktOGJmZi03YmFiZmU0YzE0MDYifQ.SHp_IGC25eHdsxvIYis1E9GV4FJC-aAC58_uVllKpOlRwycHyVZXx8So82n5EDE-UxAeDvU-nb1uP3AtLEEv3cgewBIxIXkgw2v6aYUAG1GW0clllNwRJp3GHhQGVb6562yXizx-KCzI33pmGq0EhPBQ8urdDTtHl3HWSZBRqNFEglZiolJCmznemuLK0yNfdaX04lOXkt87v9Wlf2awjSZi2AYlwiqnSgWEJEqcljZSGc5K2JSHybtf_LsWJOhq6szoWCz0sJSLyD6gMnzS-Qqdq7t8eszuBSoZLfn1uZ1hnrVPe-sIPYSwq6DsDHy_JZqUdVL4Dmnr82oeOITJaQ%26source%3D9607060d97aac19f42cc5c59b0ec4a1d&amp;source=gmail&amp;ust=1715064449755000&amp;usg=AOvVaw0DCKLCLCmjCr-zOL2-m2ed"
+                                                            data-saferedirecturl="{}"
                                                             >Establecer contraseña</a
                                                           >
                                                         </div>
@@ -361,8 +361,8 @@ def AtalassianEs():
                         </tbody>
                       </table>
                     </div>
-                   """.format(currentDate,userEmail,userName,userEmail))
-    fileNameHtml=userName+"Atalasian.html"
+                   """.format(currentDate,userEmail,userName,userEmail,url,url))
+    fileNameHtml=userName+"Atalassian.html"
     htmlFile=open("./reportFolder/"+fileNameHtml,"w")
     htmlFile.write(atalasianHtml)
     htmlFile.close()

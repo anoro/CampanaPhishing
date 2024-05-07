@@ -2,7 +2,7 @@
 
 Open proyect for automatize the phishing campaigns attacks for organizations
 
-by Guillermo ANoro
+by Guillermo Anoro
 
 ## Legal DIsclaimer
 
@@ -12,10 +12,13 @@ I don´t make responsable of the uses of this tools, this tool is propared for E
 
 The program is able to send 3 kind of phishing emails
 
-- Bank
+- Banks
 - Atalasian
 - OneDrive
 - Zones to rent an office
+- Adobe
+- AWS
+- DocuSign
 
 And developing...
 
