@@ -2,7 +2,7 @@
 
 Open proyect for automatize the phishing campaigns attacks for organizations
 
-by Guillermo ANoro
+by Guillermo Anoro
 
 ## Legal DIsclaimer
 
