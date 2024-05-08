@@ -5,7 +5,7 @@ import smtplib
 import random
 from helper.helper import getPath
 
-def OneDriveEs():
+def onedrive_es():
     
     #Información de la victima
     userName = input("Introduce el nombre de tu victima-->")
