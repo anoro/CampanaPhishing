@@ -2,29 +2,27 @@
 
 Open proyect for automatize the phishing campaigns attacks for organizations
 
-by Guillermo Anoro(anoro)
+by Guillermo Anoro
 
-## Legal Disclaimer
+## Legal DIsclaimer
 
 I don´t make responsable of the uses of this tools, this tool is propared for Educational porpouses or to medium-small enterprises can use to make campaigns of phishing to train their employees
 
 ## Features
 
-The program is able to send 3 kind of phishing emails, with the next templates that are similar than the next ones:
+The program is able to send 3 kind of phishing emails
 
 - Banks
-- Atalassian
+- Atalasian
 - OneDrive
 - Zones to rent an office
 - Adobe
 - AWS
 - DocuSign
-- And developing...
 
-Also the program will be able to recolect information from the users that are phished and make an report with the floowing information:
-- Number of users
-- Emails
-- ...
+And developing...
+
+Also the program will be able to recolect information from the users that are phishinged
 
 ## Installation
 

