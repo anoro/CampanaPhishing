@@ -8,7 +8,6 @@ from email.mime.multipart import MIMEMultipart
 
 #Web Portal
 from flask import Flask, request, jsonify, render_template ,redirect, url_for
-import uuid
 
 
 def getPath():
