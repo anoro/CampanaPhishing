@@ -23,7 +23,7 @@ from helper.helper import getPath,generateFolderReport,generateUrlAccess
 Version="0.1"
 
 def main():
-    print("Starting CampanaPhishing --> Version: v"+Version+"\n Templates to deploy:")
+    print("Starting CampanaPhishing --> Version: v"+Version+"\nTemplates to deploy:")
     print("\n[1] Bank ")
     print("\n[2] Atalassian")
     print("\n[3] OneDrive")
