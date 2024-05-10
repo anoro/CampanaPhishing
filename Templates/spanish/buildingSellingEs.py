@@ -134,7 +134,7 @@ def building_selling_es():
                                                               "
                                                               ><img
                                                                 data-imagetype="External"
-                                                                src="https://st3.idealista.com/static/common/release/home/resources/img/logo-small.png"
+                                                                src="https://s3testbucketganoro.s3.eu-west-1.amazonaws.com/image/idealista.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIG1A0QK3vUhFcHvKc%2F0v0f%2BkaSXr3JVPEt7s72GSY89gAiB8dXaZJpCuKORDpIdXHIMWcNHOZ2ZuBwGagfPS6IR8BCroAggoEAEaDDIyMjU1Njg2MTQ1NiIMp7SeGioRacf6LNMbKsUCGD%2BA0%2BiyQwJtyqYvyoRR2ju9svRs%2F0DCLCAv3BjmopTTMDkxeF2hE9H1yYVcyW6FDi5Ho1cSsMOH7QjBXDUZXMPhQXuBQTVyu8AQro%2BiwzVTM%2F4QLlprHJjLTqOr%2FjkKL3n1kUw%2F%2FeM6X%2F7bamEQmdn%2FiAfVJN2U16pn72PMc%2B6Tyaftnqr98DzVxSMrN1cK5OmEanwHply8L7OCzhMvYZZ1rvYkJLqwAOBn6%2FlKVC4aJQnaFcCBO9gAv24ExABonqgUlPa1rzfqspLx2PJ1tu%2Fu10hTm4u1Ps12RKyXgqt7vYPTa66uPvNNPvGE6GJ%2FDX4xYScnHOllixuJK8sq1aVDFvnqEJKVYvR87fJJQUgNKwmlalbIgHaKVljStP4foZyUMuVOs7HNP2E1W50bn5xNZcUNBTp75s%2FbX2iJ8yMpbfrxsjC3gfexBjq0ArPuk%2F7gjPtlb9%2FZvtMIFv3tnE0jdyWqEBMnZMtFSrA2Dm85uwRmNUyCjpYsjhmzYtD7xQZdj%2FCydCMXLn4NLdD0B%2Bfqybgzb7L8BgQCv7SV30Kk4iZxI5t0fVSrch0DbOP%2Fzd%2BZQl4Maz7%2BBFgik1FtQc8b1joXx35Ah144X80%2Bg8Ce7RkDPFFJTQL%2FQ%2BHCb8rMwfvGiMI6Qf%2FTifEfTh76TZhr7vyM89T%2BlbGT01XWImyK8Wc%2FZnGh1cZtscV21w24FiWO446b9NMKrdOdBa7Zj8U2yMg5NmU%2B%2BrbGKBYOhgZrOHIumPGZ96ZSGq%2B3VRaIgO08yIbEnx14%2FKyb1SjWFQDzdwTFVxrKt7uE12ftAjwcn1fZ%2FcBss2x1IfBxIFtd5uYgch2i8iIkZy1MqeXSKMZR&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240510T103528Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIATHULMGQIH3CJNA7F%2F20240510%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=3ea40434b9668ac8561fa02f3269794bfd218d14c256719570673e75e3ae872b"
                                                                 height="auto"
                                                                 width="111"
                                                                 style="
@@ -279,7 +279,7 @@ def building_selling_es():
                                                                         "
                                                                         data-ogsc="rgb(20, 20, 20)"
                                                                       >
-                                                                        Hola, Ganoro,
+                                                                        Hola, Usuario,
                                                                       </div>
                                                                     </td>
                                                                   </tr>
@@ -891,7 +891,7 @@ def building_selling_es():
                                                                         data-ogsc="rgb(0, 0, 0)"
                                                                       >
                                                                         <a
-                                                                          href="https://www.idealista.com/inmueble/96342797/?xts=582065&amp;xtor=EPR-1168-[daily_total_alerts_20240508]-20240508-[Property_New_Link]-72493771780@1-20240508075412&amp;isFromSavedSearch=true&amp;origin=alertOneDailyWithoutSuggestions&amp;savedSearchAlertId=93489918&amp;genericSearch=true"
+                                                                          href="https://google.es"
                                                                           target="_blank"
                                                                           rel="noopener noreferrer"
                                                                           data-auth="NotApplicable"
@@ -1088,7 +1088,7 @@ def building_selling_es():
                                                                               data-ogab="#e5e6e1"
                                                                             >
                                                                               <a
-                                                                                href="https://www.idealista.com/inmueble/96342797/?xts=582065&amp;xtor=EPR-1168-[daily_total_alerts_20240508]-20240508-[Property_New_Photo]-72493771780@1-20240508075412&amp;isFromSavedSearch=true&amp;origin=alertOneDailyWithoutSuggestions&amp;savedSearchAlertId=93489918&amp;genericSearch=true"
+                                                                                href="https://www.google.es"
                                                                                 target="_blank"
                                                                                 rel="noopener noreferrer"
                                                                                 data-auth="NotApplicable"
@@ -1502,7 +1502,7 @@ def building_selling_es():
                                                                 >
                                                                   Desde
                                                                   <a
-                                                                    href="https://www.idealista.com/usuario/tus-alertas?xts=582065&amp;xtor=EPR-1168-[daily_total_alerts_20240508]-20240508-[tus_busquedas]-72493771780@1-20240508075412"
+                                                                    href="https://www.google.es"
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
                                                                     data-auth="NotApplicable"
@@ -1523,7 +1523,7 @@ def building_selling_es():
                                                                   recibiendo este resumen diario.
                                                                   <br />Si ya no te interesan, puedes
                                                                   <a
-                                                                    href="https://www.idealista.com/usuario/tus-alertas?xts=582065&amp;xtor=EPR-1168-[daily_total_alerts_20240508]-20240508-[baja]-72493771780@1-20240508075412"
+                                                                    href="https://www.google.es"
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
                                                                     data-auth="NotApplicable"
@@ -1744,7 +1744,7 @@ def building_selling_es():
                                                                   data-ogsc="rgb(0, 0, 0)"
                                                                 >
                                                                   <a
-                                                                    href="https://www.idealista.com/download?xts=582065&amp;xtor=EPR-1168-[daily_total_alerts_20240508]-20240508-[app_img]-72493771780@1-20240508075412"
+                                                                    href="https://wwww.google.es"
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
                                                                     data-auth="NotApplicable"
@@ -1861,7 +1861,7 @@ def building_selling_es():
                                                                 >
                                                                   ¿Problemas? Contacta con idealista
                                                                   <a
-                                                                    href="https://www.idealista.com/info/contacto?xts=582065&amp;xtor=EPR-1168-[daily_total_alerts_20240508075412]-20240508075412-[contacta]-[]-[]"
+                                                                    href="https://wwww.google.es"
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
                                                                     data-auth="NotApplicable"
@@ -1982,7 +1982,7 @@ def building_selling_es():
                                                                   La utilización de esta página supone
                                                                   que has leído la
                                                                   <a
-                                                                    href="https://www.idealista.com/info/proteccion-datos?xts=582065&amp;xtor=EPR-1168-[daily_total_alerts_20240508075412]-20240508075412-[proteccion_datos]-[]-[]"
+                                                                    href="https://wwww.google.es"
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
                                                                     data-auth="NotApplicable"
@@ -2003,7 +2003,7 @@ def building_selling_es():
                                                                   >
                                                                   y has aceptado los
                                                                   <a
-                                                                    href="https://www.idealista.com/info/nota-legal?xts=582065&amp;xtor=EPR-1168-[daily_total_alerts_20240508075412]-20240508075412-[nota_legal]-[]-[]"
+                                                                    href="https://wwww.google.es"
                                                                     target="_blank"
                                                                     rel="noopener noreferrer"
                                                                     data-auth="NotApplicable"
@@ -2137,7 +2137,7 @@ def building_selling_es():
                                                                               <td style="width: 111px">
                                                                                 <img
                                                                                   data-imagetype="External"
-                                                                                  src="https://st3.idealista.com/static/common/release/home/resources/img/logo-small.png"
+                                                                                  src="https://s3testbucketganoro.s3.eu-west-1.amazonaws.com/image/idealista.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIG1A0QK3vUhFcHvKc%2F0v0f%2BkaSXr3JVPEt7s72GSY89gAiB8dXaZJpCuKORDpIdXHIMWcNHOZ2ZuBwGagfPS6IR8BCroAggoEAEaDDIyMjU1Njg2MTQ1NiIMp7SeGioRacf6LNMbKsUCGD%2BA0%2BiyQwJtyqYvyoRR2ju9svRs%2F0DCLCAv3BjmopTTMDkxeF2hE9H1yYVcyW6FDi5Ho1cSsMOH7QjBXDUZXMPhQXuBQTVyu8AQro%2BiwzVTM%2F4QLlprHJjLTqOr%2FjkKL3n1kUw%2F%2FeM6X%2F7bamEQmdn%2FiAfVJN2U16pn72PMc%2B6Tyaftnqr98DzVxSMrN1cK5OmEanwHply8L7OCzhMvYZZ1rvYkJLqwAOBn6%2FlKVC4aJQnaFcCBO9gAv24ExABonqgUlPa1rzfqspLx2PJ1tu%2Fu10hTm4u1Ps12RKyXgqt7vYPTa66uPvNNPvGE6GJ%2FDX4xYScnHOllixuJK8sq1aVDFvnqEJKVYvR87fJJQUgNKwmlalbIgHaKVljStP4foZyUMuVOs7HNP2E1W50bn5xNZcUNBTp75s%2FbX2iJ8yMpbfrxsjC3gfexBjq0ArPuk%2F7gjPtlb9%2FZvtMIFv3tnE0jdyWqEBMnZMtFSrA2Dm85uwRmNUyCjpYsjhmzYtD7xQZdj%2FCydCMXLn4NLdD0B%2Bfqybgzb7L8BgQCv7SV30Kk4iZxI5t0fVSrch0DbOP%2Fzd%2BZQl4Maz7%2BBFgik1FtQc8b1joXx35Ah144X80%2Bg8Ce7RkDPFFJTQL%2FQ%2BHCb8rMwfvGiMI6Qf%2FTifEfTh76TZhr7vyM89T%2BlbGT01XWImyK8Wc%2FZnGh1cZtscV21w24FiWO446b9NMKrdOdBa7Zj8U2yMg5NmU%2B%2BrbGKBYOhgZrOHIumPGZ96ZSGq%2B3VRaIgO08yIbEnx14%2FKyb1SjWFQDzdwTFVxrKt7uE12ftAjwcn1fZ%2FcBss2x1IfBxIFtd5uYgch2i8iIkZy1MqeXSKMZR&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240510T103528Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIATHULMGQIH3CJNA7F%2F20240510%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=3ea40434b9668ac8561fa02f3269794bfd218d14c256719570673e75e3ae872b"
                                                                                   height="auto"
                                                                                   width="111"
                                                                                   style="

