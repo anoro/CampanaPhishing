@@ -2,6 +2,8 @@ import time
 import os
 import sys
 import smtplib
+
+sys.path.append('../../')
 from helper.helper import getPath,get_input_en
 
 def bank_en():
