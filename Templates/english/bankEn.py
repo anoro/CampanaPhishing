@@ -3,7 +3,7 @@ import os
 import sys
 import smtplib
 
-sys.path.append('../../')
+#sys.path.append('../../')
 from helper.helper import get_input_en, getPath
 
 def bank_en():
