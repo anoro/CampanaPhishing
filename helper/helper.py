@@ -66,7 +66,7 @@ def get_input_es():
     
     return userName,organization,url,userEmail,currentDate,userAccount
 
-def get_inputs_en():
+def get_input_en():
     #Info of the victim
     userName = input("Enter the name of your victim-->")
     organization = input("Enter the organization-->")
