@@ -3,7 +3,7 @@ import os
 import sys
 from helper.helper import getPath,get_input_en
 
-def OneDriveEn():
+def onedrive_en():
     
     get_input_en()
     

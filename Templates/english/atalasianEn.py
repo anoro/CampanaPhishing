@@ -4,7 +4,7 @@ import sys
 import smtplib
 from helper.helper import getPath,get_input_en
 
-def AtalassianEn():
+def atalassian_En():
     
     get_input_en()
     

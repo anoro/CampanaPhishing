@@ -4,15 +4,15 @@ import sys
 import smtplib
 
 #Import templates Spanish
-from Templates.spanish.bankEs import BankEs
+from Templates.spanish.bankEs import bank_es
 from Templates.spanish.onedriveEs import onedrive_es
-from Templates.spanish.atalasianEs import AtalassianEs
+from Templates.spanish.atalasianEs import atlassian_es
 from Templates.spanish.buildingSellingEs import building_selling_es
 
 #Import templates English
-from Templates.english.bankEn import BankEn
-from Templates.english.onedriveEn import OneDriveEn
-from Templates.english.atalasianEn import AtalassianEn
+from Templates.english.bankEn import bank_en
+from Templates.english.onedriveEn import onedrive_en
+from Templates.english.atalasianEn import atalassian_En
 from Templates.english.awsEn import AwsEn
 
 #Import helpers
@@ -48,10 +48,10 @@ def main():
         while language!=0|language!=1:
             if language==0:
                 #Template Spanish
-                BankEs()
+                bank_es()
             else:
                 #Template English
-                BankEn()
+                bank_en()
     #Atalassian
     elif value == 2:
         print("\nAtalassian:\n"+languageString)
@@ -59,10 +59,10 @@ def main():
         while language!=0|language!=1:
             if language==0:
                 #Template Spanish
-                AtalassianEs()
+                atlassian_es()
             else:
                 #Template English
-                AtalassianEn()
+                atalassian_En()
                 
     #Onedrive Template
     elif value == 3:
@@ -74,7 +74,7 @@ def main():
                 onedrive_es()
             else:
                 #Template English
-                OneDriveEn()
+                onedrive_en()
 
     #
     elif value == 4:
