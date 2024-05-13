@@ -28,8 +28,8 @@ def main():
     print("\n[2] Atalassian")
     print("\n[3] OneDrive")
     print("\n[4] Idealista")
-    print
-    print("\n\nSelect your option: \n")
+    print("\n[5] AWS")
+    print("\n\nSelect your option: ")
 
     #Selection of the lenguage of the attack
     value=int(input())
@@ -63,7 +63,7 @@ def main():
             else:
                 #Template English
                 atalassian_En()
-                
+
     #Onedrive Template
     elif value == 3:
         print("\nOneDrive:\n"+languageString)
@@ -87,7 +87,7 @@ def main():
             else:
                 #Template English
                 print("\nNot finish")
-                
+
     elif value == 5:
         print("\AWS:\n"+languageString)
         language=int(input())
@@ -97,10 +97,8 @@ def main():
                 print("\nNot finish")
             else:
                 #Template English
-                AwsEn()
-                
-                
-                
+                print("\nNot finish")
+                #AwsEn()
     #More Templates...
 
     else:

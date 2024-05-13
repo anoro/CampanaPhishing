@@ -14,7 +14,7 @@ def getPath():
     currentPath = os.getcwd()
 
     # generate the aperance of the terminal of the user to make inputs
-    print(f"\x1b[91m{os.path.basename(currentPath)}\x1b[0m:", currentPath)
+    return print(f"\x1b[91m{os.path.basename(currentPath)}\x1b[0m:", currentPath)
 
 def generateFolderReport():
     # Creating new folders for the final report
