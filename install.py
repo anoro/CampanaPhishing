@@ -10,7 +10,8 @@ paquetes_flask = [
     'flask-wtf',
     'click'
     'smtplib',
-    'email'
+    'email',
+    'qrcode'
 ]
 
 # Instalación de paquetes

@@ -8,6 +8,9 @@ import json
 #to remove folders
 import shutil
 
+#QR lib
+import qrcode
+
 #email import libraries
 import smtplib
 from email.mime.text import MIMEText
@@ -144,3 +147,15 @@ def urlShorter(url):
     else:
         print(f"Error shortening URL: {response.status_code}")
         os.abort()
+        
+def qrGenerator(url,username):
+    qr_data=url
+    qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L)
+    # Add data to the QR code
+    qr.add_data(qr_data)
+    qr.make(fit=True)
+    # Create an image from the QR code data
+    img = qr.make_image(fill_color="black", back_color="white")
+    #Save the image on reports
+    img.save('reportsCampana/qr'+username'.img')
+    return img

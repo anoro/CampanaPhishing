@@ -56,7 +56,7 @@ Once the program will ask the following question:
 
 and will send the custom email from flask 
 
-Implementing the url shorter also
+Implement in the code the url shorter and qr generator by a url (QRhishing)
 The HTML Templates are done to extract more info of the user to add more you need to add endpoints on the app.py for deploy the flask app properly
 
 Important Steps:
