@@ -2,7 +2,7 @@ import time
 import os
 import sys
 import smtplib
-from helper.helper import getPath, get_input_es
+from helper.helper import saveTemplateGenerated
 
 def building_selling_es():
     
@@ -2250,9 +2250,4 @@ def building_selling_es():
                           </div>
                         </html>
                     """).format()
-    fileNameHtml=userName+str(date)+"Idealista.html"
-    htmlFile=open("./reportFolder/"+fileNameHtml,"w")
-    htmlFile.write(idealista_html)
-    htmlFile.close()
-    print("HTML creado y preparado para enviar")
-    getPath()
+    saveTemplateGenerated(use)

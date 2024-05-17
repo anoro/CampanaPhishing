@@ -57,3 +57,6 @@ Once the program will ask the following question:
 and will send the custom email from flask 
 
 Implementing the url shorter like the next page: https://url.gratis/en/ 
+
+Important Steps:
+- Set up the SMTP (User/password), and make the need changes if them are needed
