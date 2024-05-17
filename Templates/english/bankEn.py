@@ -9,11 +9,14 @@ from helper.helper import get_input_en, getPath
 def bank_en():
     get_input_en()
     ##HTML que se enviara a la victima
-    bank = input("Enter the bank you will spoof-->")
-    if bank==1:
+    bank = int(input("Enter the bank you will spoof\n[0]BBVA\n[1]Santander\n-->"))
+    if bank==0:
         bbva_en(userName,userEmail,url)
-    elif bank==2:
+    elif bank==1:
         santander_en(userName,userEmail,url)
+    else:
+      print("El banco que quieres suplantar no esta en la lista, intentalo de nuevo")
+      bank_en()
         
 def bbva_en():
     #bbva bank attack

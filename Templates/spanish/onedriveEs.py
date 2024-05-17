@@ -251,5 +251,5 @@ def onedrive_es():
     htmlFile=open("./reportFolder/"+fileNameHtml,"w")
     htmlFile.write(officeHtml)
     htmlFile.close()
-    print("HTML creado y preparado para enviar")
-    getPath()
+    print("HTML creado y preparado para enviar por correo: "+getPath()+"/reportsCampana/"+str(fileNameHtml))
+    
