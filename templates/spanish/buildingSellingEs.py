@@ -2252,4 +2252,4 @@ def building_selling_es():
 </html>
 
                     """).format(urlShort,userName,urlShort,urlShort,urlShort,urlShort,urlShort,urlShort,urlShort,urlShort,urlShort)
-    saveTemplateGenerated(userName,'Idealistas',idealista_html,"Nuevos anuncios hoy "+currentDate,"no-responder@movicoders.link",userEmail)
+    saveTemplateGenerated(userName,'Idealistas',idealista_html,"Nuevos anuncios hoy "+currentDate,"notificaciones-idea@movicoders.link",userEmail)

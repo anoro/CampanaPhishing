@@ -40,6 +40,8 @@ def getInfoUser(userName):
     fileReports.close()
     return jsonify({'message': 'Entry added successfully! You was phished :)', 'data_count': numEntries})
 
+
+#Idealista Fake Login 
 @app.route('/report',methods=['GET'])
 def prevewReport():
     global dataEntry, numEntries
