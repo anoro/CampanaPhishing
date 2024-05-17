@@ -2,11 +2,15 @@ import time
 import os
 import sys
 import smtplib
-from helper.helper import saveTemplateGenerated
+from helper.helper import saveTemplateGenerated,get_input_es, urlShorter
 
 def building_selling_es():
     
     userName,url,userEmail,currentDate=get_input_es()
+    print("\nGenerando suplantanción idealista...")
+    print("\nLos datos de la victima usados para este ataque:\n[Usuario]:"+userName+"\n[Email]:"+userEmail)
+    urlShort=urlShorter(url+userName)
+    print("\n[Url Maliciosa]:"+url+userName+"\n[Url Acortada]:"+urlShort)
 
     idealista_html=("""
 <html>
@@ -2247,5 +2251,5 @@ def building_selling_es():
   </div>
 </html>
 
-                    """).format(url,userName,url,url,url,url,url,url,url,url,url)
+                    """).format(urlShort,userName,urlShort,urlShort,urlShort,urlShort,urlShort,urlShort,urlShort,urlShort,urlShort)
     saveTemplateGenerated(userName,'Idealistas',idealista_html,"Nuevos anuncios hoy "+currentDate,"no-responder@movicoders.link",userEmail)
