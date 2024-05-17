@@ -56,7 +56,9 @@ Once the program will ask the following question:
 
 and will send the custom email from flask 
 
-Implementing the url shorter like the next page: https://url.gratis/en/ 
+Implementing the url shorter also
+The HTML Templates are done to extract more info of the user to add more you need to add endpoints on the app.py for deploy the flask app properly
 
 Important Steps:
 - Set up the SMTP (User/password), and make the need changes if them are needed
+
