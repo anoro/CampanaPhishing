@@ -10,19 +10,25 @@ I don´t make responsable of the uses of this tools, this tool is propared for E
 
 ## Features
 
-The program is able to send 3 kind of phishing emails
+The program is able to send this kind of phishing emails spoofing it
 
 - Banks
-- Atalasian
-- OneDrive
-- Zones to rent an office
+- Atalassian
+- OneDrive/Office(Recovery/MFA-QR)
+- Zones to rent an office-
 - Adobe
 - AWS
 - DocuSign
+- Zoom
 
 And developing...
 
-Also the program will be able to recolect information from the users that are phishinged
+**Note** The application does not intend to use the brand image to steal information from the impersonated companies, remember that its use is internal for awareness purposes.
+
+Also the program will be able to recolect information from the users that are phished
+- Name of the user
+- IP
+- Browser information
 
 ## Installation
 
