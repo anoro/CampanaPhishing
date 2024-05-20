@@ -30,8 +30,12 @@ def main():
     print("\n[2] Atalassian")
     print("\n[3] OneDrive")
     print("\n[4] Idealista")
-    print("\n[5] AWS")
-    print("\n\nSelect your option: ")
+    print("\n[5] Docusign")
+    print("\n[6] AWS")
+    print("\n[7] Zoom")
+    print("\n[8] BitWarden")
+    print("\n[9] Antivirus")
+    print("\nSelect your option: ")
 
     #Selection of the lenguage of the attack
     value=int(input())

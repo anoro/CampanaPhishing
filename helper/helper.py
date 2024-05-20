@@ -157,5 +157,5 @@ def qrGenerator(url,username):
     # Create an image from the QR code data
     img = qr.make_image(fill_color="black", back_color="white")
     #Save the image on reports
-    img.save('reportsCampana/qr'+username'.img')
+    img.save('reportsCampana/qr'+username+'.img')
     return img
