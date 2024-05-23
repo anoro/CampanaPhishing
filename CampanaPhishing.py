@@ -8,12 +8,16 @@ from templates.spanish.bankEs import bank_es
 from templates.spanish.onedriveEs import onedrive_es
 from templates.spanish.atalasianEs import atlassian_es
 from templates.spanish.buildingSellingEs import building_selling_es
+from templates.spanish.antivirusEs import antivirus_es
+from templates.spanish.docusignEs import docusign_es
 
 #Import templates English
 from templates.english.bankEn import bank_en
 from templates.english.onedriveEn import onedrive_en
 from templates.english.atalasianEn import atalassian_En
-from templates.english.awsEn import AwsEn
+from templates.english.awsEn import aws_en
+from templates.english.antivirusEn import antivirus_en
+from templates.english.docusignEn import docusign_en
 
 #Import helpers
 from helper.helper import getPath,generateFolderReport, saveReportAndTemplates
@@ -112,9 +116,40 @@ def main():
             print("\nError selection language")
             sys.exit()
     
-    #AWS template
+    #Docusign template
     elif value == 5:
+        print("Docusign:\n"+languageString)
+        language=int(input())
+        if language==0:
+            #Template Spanish
+            print("Accediendo al modo phishing...\n")
+            docusign_es()
+        elif language==1:
+            #Template English
+            print("\nAccessing to phishing mode...\n")
+            docusign_en()
+        else:
+            #Fail statement
+            print("\nError selection language")
+            sys.exit()
+    #Aws template
+    elif value == 6:
         print("AWS:\n"+languageString)
+        language=int(input())
+        if language==0:
+            #Template Spanish
+            print("\nNot finish spanish version")
+        elif language==1:
+            #Template English
+            print("\nAccessing to phishing mode")
+            aws_en()
+        else:
+            #Fail statement
+            print("\nError selection language")
+            sys.exit()
+    #Zoom template
+    elif value == 7:
+        print("Zoom:\n"+languageString)
         language=int(input())
         if language==0:
             #Template Spanish
@@ -123,6 +158,37 @@ def main():
             #Template English
             print("\nNot finish english version")
             #AwsEn()
+        else:
+            #Fail statement
+            print("\nError selection language")
+            sys.exit()
+    #Bitwarden template
+    elif value == 8:
+        print("Bitwarden:\n"+languageString)
+        language=int(input())
+        if language==0:
+            #Template Spanish
+            print("\nNot finish spanish version")
+        elif language==1:
+            #Template English
+            print("\nNot finish english version")
+            #AwsEn()
+        else:
+            #Fail statement
+            print("\nError selection language")
+            sys.exit()
+    #Antivirus Template
+    elif value == 9:
+        print("Antivirus:\n"+languageString)
+        language=int(input())
+        if language==0:
+            #Template Spanish
+            print("\nAccediendo al modo phishing...\n")
+            antivirus_es()
+        elif language==1:
+            #Template English
+            print("\nAccessing to phishing mode")
+            antivirus_en()
         else:
             #Fail statement
             print("\nError selection language")

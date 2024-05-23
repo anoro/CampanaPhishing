@@ -11,11 +11,7 @@ paquetes_flask = [
     'click'
     'smtplib',
     'email',
-<<<<<<< HEAD
     'segno'
-=======
-    'qrcode'
->>>>>>> b2021e40f97dea3d7e5a6bbfcdf39eb655617850
 ]
 
 # Instalación de paquetes

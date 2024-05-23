@@ -1,19 +1,15 @@
-import time
-import os
-import sys
-import smtplib
-from helper.helper import saveTemplateGenerated,get_input_en, urlShorter
+from helper.helper import saveTemplateGenerated,get_input_es, urlShorter
 
 def docusign_es():
-    userName,url,userEmail,currentDate=get_input_en()
+    userName,url,userEmail,currentDate=get_input_es()
     ##HTML suplantacion bbva
     print("\nGenerando suplantación de docusign...")
-    print("\nVictim data used for this attack:\n[User]:"+userName+"\n[Email]:"+userEmail)
+    print("\nDatos de las víctimas utilizados para este ataque:\n[Usuario]:"+userName+"\n[Email]:"+userEmail)
     urlShort=urlShorter(url+userName)
-    print("\n[Malicious Url]:"+url+userName+"\n[Short Url]:"+urlShort)
+    print("\n[Url Maliciosa]:"+url+userName+"\n[Url Acortada]:"+urlShort)
     
     docusignHtml=("""
-<html lang="en">
+<html lang="es">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="initial-scale=1.0" />
@@ -113,8 +109,8 @@ def docusign_es():
                                     "
                                     align="center"
                                   >
-                                    Payroll sent you a document to review and
-                                    sign.
+                                    La Nómina que le ha enviado un documento para que lo revise y
+                                    firme.
                                   </td>
                                 </tr>
                               </tbody>
@@ -173,7 +169,7 @@ def docusign_es():
                                                   ><!--[if mso
                                                     ]>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!
                                                   [endif]-->
-                                                  REVIEW DOCUMENT
+                                                  REVISA EL DOCUMENTO
                                                   <!--[if mso
                                                     ]>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!
                                                   [endif]--></span
@@ -245,32 +241,14 @@ def docusign_es():
                         font-family: Helvetica, Arial, Sans Serif;
                         line-height: 20px;
                       "
-                      >Greetings,<br /><br />
-                      We are in the midst of making preparation for our fringe
-                      benefits tax return and a declaration is required from
-                      you.<br /><br />
-                      Based on fringe benefits requirements, if an employee's
-                      individual fringe benefits amount is more than $ 2,000,
-                      employer must report the grossed-up value of that amount
-                      on the employee's PAYG payment summary. This amount is
-                      known as a reportable fringe benefits amount (RFBA) and
-                      will be included in your Payment Summary for the upcoming
-                      financial year end.<br /><br />
-                      The amount reported on the payment summary will not be
-                      included in your assessable income or affect the amount of
-                      standard levy payable. The total will, however, be
-                      included in several income tests relating to certain
-                      government benefits and obligations.<br /><br />
-                      We have completed the attached declaration form on behalf
-                      of you based on the expense claim amount reimbursed to you
-                      within the fringe benefits tax year-end. Please complete
-                      the percentage and your signature in the form for those
-                      expenses incurred in your earning assessable income for
-                      business within 7 days.<br /><br />
-                      Should you have any queries, please log a ticket with
-                      Payroll. We will be happy to assist you.<br /><br />
-                      Thank you.<br />
-                      Payroll Team<br /></span
+                      >Saludos,<br /><br />
+                      Estamos preparando la declaración de la renta y es necesario que haga una declaración.<br /><br />
+                      En base a los requisitos de los beneficios complementarios, si el importe de los beneficios complementarios individuales de un empleado es superior a 2.000 $, el empleador debe declarar el valor bruto de dicho importe en el resumen de pago del PAYG del empleado. Este importe se conoce como importe de prestaciones complementarias declarables (RFBA) y se incluirá en su resumen de pago para el próximo cierre de ejercicio.<br /><br />
+                      El importe consignado en el resumen de pago no se incluirá en su renta imponible ni afectará al importe de la tasa normal a pagar. No obstante, el total se incluirá en varias pruebas de ingresos relacionadas con determinadas prestaciones y obligaciones del gobierno.<br /><br />
+                      Hemos cumplimentado el formulario de declaración adjunto en su nombre basándonos en el importe de la declaración de gastos que se le ha reembolsado dentro del ejercicio fiscal de prestaciones complementarias. Por favor, complete el porcentaje y su firma en el formulario para aquellos gastos incurridos en su obtención de ingresos imponibles para los negocios dentro de 7 días.<br /><br />
+                      Si tiene alguna duda, envíe un ticket a Nómina. Estaremos encantados de ayudarle.<br /><br />
+                      Gracias.<br />
+                      Equipo de nóminas<br /></span
                     ><br />
                   </td>
                 </tr>
@@ -337,10 +315,10 @@ def docusign_es():
                       "
                     >
                       <b aria-level="3" role="heading"
-                        >Do Not Share This Email</b
+                        >No comparta este correo electrónico</b
                       ><br />
-                      This email contains a secure link to DocuSign. Please do
-                      not share this email, link, or access code with others.<br />
+                      Este correo electrónico contiene un enlace seguro a DocuSign. No comparta 
+                      este correo electrónico, enlace o código de acceso con otras personas.<br />
                     </p>
                     <p
                       style="
@@ -354,8 +332,8 @@ def docusign_es():
                       <b aria-level="3" role="heading"
                         >Alternate Signing Method</b
                       ><br />
-                      Visit DocuSign.com, click 'Access Documents', and enter
-                      the security code:<br />
+                      Visite DocuSignn.com, haga clic en "Acceder a documentos" e introduzca
+                      el código de seguridad:<br />
                       1A4F5045AA3512345ASDFZ6F098231C82
                     </p>
                     <p
@@ -368,11 +346,10 @@ def docusign_es():
                       "
                     >
                       <b aria-level="3" role="heading">About DocuSign</b><br />
-                      Sign documents electronically in just minutes. It's safe,
-                      secure, and legally binding. Whether you're in an office,
-                      at home, on-the-go -- or even across the globe -- DocuSign
-                      provides a professional trusted solution for Digital
-                      Transaction Management™.
+                      Firme documentos electrónicamente en cuestión de minutos. 
+                      Es seguro y legalmente vinculante. 
+                      Tanto si se encuentra en la oficina, en casa, sobre la marcha o incluso en cualquier parte del mundo, 
+                      DocuSign le ofrece una solución profesional de confianza para Digital Transaction Management.
                     </p>
                     <p
                       style="
@@ -420,7 +397,7 @@ def docusign_es():
                       <a
                         href="hjavascript:;window.parent.$('#webModal').modal('show');"
                         style="color: #2463d1"
-                        >Support Center</a
+                        >Centro de soporte</a
                       >.<br /><br />
                     </p>
                     <p
@@ -445,7 +422,7 @@ def docusign_es():
                           height="18"
                           src="https://na2.docusign.net/Member/Images/email/icon-DownloadApp-18x18@2x.png"
                           alt=""
-                        />Download the DocuSign App
+                        />Descargar la aplicación DocuSign
                       </a>
                     </p>
                     <p
@@ -459,10 +436,10 @@ def docusign_es():
                         line-height: 14px;
                       "
                     >
-                      This message was sent to you by Claire Ni who is using the
-                      DocuSign Electronic Signature Service. If you would rather
-                      not receive email from this sender you may contact the
-                      sender with your request.
+                      Este mensaje se lo ha enviado su organización Ni, que utiliza el servicio de firma electrónica DocuSign.
+                      Servicio de firma electrónica de DocuSign. Si prefiere 
+                      no recibir correo electrónico de este remitente, puede ponerse en contacto con el 
+                      si lo solicitas.
                     </p>
                   </td>
                 </tr>
@@ -476,7 +453,7 @@ def docusign_es():
     <span itemscope="" itemtype="http://schema.org/EmailMessage"
       ><meta
         itemprop="text"
-        content="Claire Ni sent you a document to review and sign." /><span
+        content="Se te ha enviado un documento para que lo revises y firmes." /><span
         itemscope=""
         itemprop="about"
         itemtype="http://schema.org/CreativeWork"
@@ -715,7 +692,7 @@ def docusign_es():
                             >
                               <img
                                 data-imagetype="External"
-                                src="https://eu.docusign.net/Member/image.aspx?i=logo&amp;l=fe2118cd-c930-4360-936d-62338bc100ab"
+                                src="https://eu.docusign.net/Member/image.aspx?i=logo&amp;l=fe2118cd-c930-43635-936d-62338bc100ab"
                                 height="40"
                                 width="40"
                                 alt="Imagen de {}"
@@ -778,7 +755,7 @@ def docusign_es():
                             color: black;
                           "
                           >DocuSign</span
-                        > el siguiente documento: {}.
+                        > el siguiente documento.
                       </p>
                       <p
                         style="
@@ -790,7 +767,7 @@ def docusign_es():
                         data-ogsc="rgb(51, 51, 51)"
                       >
                         Hola Usuario, <br />Te adjunto la explicación del siguiente documento.
-                        <br />Saludos<br />Jara
+                        <br />Saludos<br />
                       </p>
                     </td>
                   </tr>
@@ -937,7 +914,7 @@ def docusign_es():
                           role="heading"
                           >Dejar de recibir este correo electrónico</b
                         ><br /><a
-                          href="https://www.google.es"
+                          href="https://www.docusignn.es"
                           target="_blank"
                           rel="noopener noreferrer"
                           data-auth="NotApplicable"
@@ -948,7 +925,7 @@ def docusign_es():
                         >
                         u obtenga más información sobre
                         <a
-                          href="https://www.google.es"
+                          href="https://www.docusignn.es"
                           target="_blank"
                           rel="noopener noreferrer"
                           data-auth="NotApplicable"
@@ -959,7 +936,7 @@ def docusign_es():
                         >
                         y
                         <a
-                          href="https://www.google.es"
+                          href="https://www.docusignn.es"
                           target="_blank"
                           rel="noopener noreferrer"
                           data-auth="NotApplicable"
@@ -970,7 +947,7 @@ def docusign_es():
                         >.<br /><br />Si tiene problemas para firmar el
                         documento, por favor visite la página
                         <a
-                          href="https://www.google.es"
+                          href="https://www.docusignn.es"
                           target="_blank"
                           rel="noopener noreferrer"
                           data-auth="NotApplicable"
@@ -981,7 +958,7 @@ def docusign_es():
                         >
                         en nuestro
                         <a
-                          href="https://www.google.es"
+                          href="https://www.docusignn.es"
                           target="_blank"
                           rel="noopener noreferrer"
                           data-auth="NotApplicable"
@@ -1002,7 +979,7 @@ def docusign_es():
                         data-ogsc="rgb(102, 102, 102)"
                       >
                         <a
-                          href="https://www.google.es"
+                          href="https://www.docusignn.es"
                           target="_blank"
                           rel="noopener noreferrer"
                           data-auth="NotApplicable"
@@ -1046,7 +1023,7 @@ def docusign_es():
                         "
                         data-ogsc="rgb(102, 102, 102)"
                       >
-                        Este mensaje se lo ha enviado Jara Mur, que utiliza el
+                        Este mensaje se lo ha enviado tu empresa, que utiliza el
                         servicio de firma electrónica
                         <span
                           data-markjs="true"
@@ -1075,7 +1052,7 @@ def docusign_es():
       <span itemscope="" itemtype="http://schema.org/EmailMessage"
         ><meta
           itemprop="text"
-          content="{} le ha enviado un documento para que lo revise y firme." /><span
+          content="se le ha enviado un documento para que lo revise y firme." /><span
           itemscope=""
           itemprop="about"
           itemtype="http://schema.org/CreativeWork"
@@ -1085,7 +1062,7 @@ def docusign_es():
             itemtype="http://schema.org/ViewAction"
             ><meta
               itemprop="url"
-              content="https://eu.docusign.net/Member/EmailStart.aspx?a=f4d7d82a-43a8-4224-aa9b-526b7912d43b&amp;r=eef7c5c3-1c1b-46ea-b38a-3a04cbc50776" /><meta
+              content="https://eu.docusign.net/Member/EmailStart.aspx?a=f4d7d82a-43a8-4224-aa9b-526b7912d43b&amp;r=eef7c5c3-sdf1c1b-46ea-b38a-3a04cbc50776" /><meta
               itemprop="name"
               content="View Documents" /></span></span
       ></span>
@@ -1111,10 +1088,10 @@ def docusign_es():
   </div>
 </html>
 
-                          """).format()
-    type=input("\nChoose the type of the send: \n[0]Common\n[1]Targeted\n")
+                          """).format(urlShort, userName, userName, userEmail)
+    type=input("\nElija el tipo de envío: \n[0]Comun\n[1]Dirigido\n")
     if(int(type==1)):
-        saveTemplateGenerated(userName,"DocusignDark",docusignHtml,"Need to sign a document","notify@movicoders.link",userEmail)
+        saveTemplateGenerated(userName,"Docusign",docusignHtml,"Necesaria firma de un documento","notificaciones@movicoders.link",userEmail)
     else:
-        saveTemplateGenerated(userName,"DocusignLight",docusignHtmlDirected,"Need to sign a document","notify@movicoders.link",userEmail)
+        saveTemplateGenerated(userName,"Docusign"+userName,docusignHtmlDirected,"Necesaria firma de un documento","notificaciones@movicoders.link",userEmail)
     
