@@ -2,14 +2,18 @@ import time
 import os
 import sys
 import smtplib
-from helper.helper import getPath,get_input_en
+from helper.helper import get_input_en,saveTemplateGenerated,urlShorter
 
-def AwsEn():
-    
-    get_input_en()
-    
-    ##HTML que se enviara a la victima
-    atalasianHtml=("""
+def aws_en():
+    #Data of the victim
+    userName,url,userEmail,currentDate=get_input_en()
+    ##HTML spoof aws
+    print("\nGenerating spoof of bitdefender...")
+    print("\nVictim data used for this attack:\n[User]:"+userName+"\n[Email]:"+userEmail)
+    urlShort=urlShorter(url+userName)
+    print("\n[Malicious Url]:"+url+userName+"\n[Short Url]:"+urlShort)
+    ##HTML that will be send to the victim
+    awsHtml=("""
                    <div>
                       <table
                         class="x_MsoNormalTable"
@@ -140,10 +144,10 @@ def AwsEn():
                                     data-ogsb="rgb(255, 255, 255)"
                                   >
                                     <p style="margin: 0 0 15px 0; padding: 0 0 0 0">
-                                      Hello Movicoders - User,
+                                      Hello Movicoders - {},
                                     </p>
                                     <p style="margin: 0 0 15px 0; padding: 0 0 0 0">
-                                      Your AWS Organization (AWS Account #453954726445) uses AWS IAM
+                                      Your AWS Organization (AWS Account #438954726445) uses AWS IAM
                                       Identity Center (successor to AWS Single Sign-On) to provide
                                       access to AWS accounts and business applications.
                                     </p>
@@ -197,7 +201,7 @@ def AwsEn():
                                             data-ogsb="rgb(43, 152, 214)"
                                           >
                                             <a
-                                              href="https://appser.awsapps.com/auth/?#invite:token=AgV4BvUKYV98LLW0TGqKZ2kmng7TNHzwvjJUcPH_-V7y3msAhwACAAZJc3N1ZXIAHkFXU1Bhc3N3b3JkQ29udHJvbFBsYW5lU2VydmljZQAVYXdzLWNyeXB0by1wdWJsaWMta2V5AERBMEFpcDdLekhRV1pVWmRqV3l1amlSdFV5Z3diZTh4RmM0NHdzKzduaDBjbks0THlHUTVLZWl4emZnL3ExdHNHTnc9PQABAAdhd3Mta21zAEthcm46YXdzOmttczpldS13ZXN0LTE6NjE2OTg1ODQzNTUyOmtleS81OGNmOWQ3Zi1kZDg2LTQ1YWUtODg4Ni1mYzdiZDQwOTg3ZmYAuAECAQB47dZY-RFcWSr5yenkqiIn5S8dMsnU2cpQnSf6hBEKdnIBdPPzutoc2JjniDkLuA6dwgAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDKtAawxc_K3_JduRcAIBEIA7W-vw-G58C7R-d_FpC6dhKDc-7GZdmkLYr-uZhwUEQCAAP4PHH19ug7dFIyUb8jY9td41SVrV6ArofFQCAAAQANGBNfy8pTt2mWJ1vAXAGjq3X7nxAx3PZ2qIQEnBCrvtK6FX6gwfsPd8eTM-BxTuqv____8AAAABAAAAAAAAAAAAAAABAAABAaSHkP4jMbpyWxVbr9DcZAtIYABEVVdhLSG6s2OuO_tFPccNODnAqqciYi0qIGJq_OljVwMhQ_YYyAu9L7w04mdYcvoeFraqYwRBw06EuSCunmfJ1RN9ZuiYnogWYLBLbOgDwUEYFjAbkqJaLcNiA-KsNb3yUmUdLUu5nsyIqgY5ZbVM_XRHS9PXeh_w4ZXfOaiYIB2VXz4nQbYFItPbK_FYq7zrzezS5l1NzjCUd7xw3qiHsqWyanU-k-nNplBbxDvcHjMCl7M-Bh52H-iKoeZIHu_Nuiz5ymw_jh4rziMMX1RSNawBqPthG8Vqv3iq8AKXblM-4ZQivvPcOA6m4wszylbzzmhIcgndEebduJJc2ABnMGUCMQDRhedZsBOcjxW2DWhVnuwHagNxEGkPetyrLILe2MhzGdJI5i65SZEEz54ankWFWk8CMExWNyy9r0Z_hlkhq4z5X2fzeXdys6Iq_Xnb-PYmF3h9-LEeOb1oXoNo_yTIhQ0btQ==&amp;client_id=60dca2021c543d14&amp;user_id=52f55464-00c1-700a-5329-f60bafc894bc&amp;redirect_uri=https://appser.awsapps.com/start/"
+                                              href="{}"
                                               target="_blank"
                                               rel="noopener noreferrer"
                                               data-auth="NotApplicable"
@@ -296,7 +300,7 @@ def AwsEn():
                                     </p>
                                     <p style="margin: 0; padding: 0">
                                       <strong>Your Username:</strong
-                                      ><br />user.lastname@movicoders.com
+                                      ><br />{}
                                     </p>
                                   </td>
                                 </tr>
@@ -369,10 +373,6 @@ def AwsEn():
                       </table>
                     </div>
                     
-                   """.format(currentDate,userEmail,userName,userEmail))
-    fileNameHtml=userName+"Aws.html"
-    htmlFile=open("./reportFolder/"+fileNameHtml,"w")
-    htmlFile.write(atalasianHtml)
-    htmlFile.close()
-    print("HTML creado y preparado para enviar")
-    getPath()
+                   """.format(userName,urlShort,userEmail))
+    saveTemplateGenerated(userName,"AWS",awsHtml,"IMPORTANT notification of your AWS account","notify@movicoders.link",userEmail)
+    

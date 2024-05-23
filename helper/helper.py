@@ -9,7 +9,12 @@ import json
 import shutil
 
 #QR lib
+<<<<<<< HEAD
+import segno
+import base64
+=======
 import qrcode
+>>>>>>> b2021e40f97dea3d7e5a6bbfcdf39eb655617850
 
 #email import libraries
 import smtplib
@@ -147,6 +152,22 @@ def urlShorter(url):
     else:
         print(f"Error shortening URL: {response.status_code}")
         os.abort()
+<<<<<<< HEAD
+
+def qrGeneratorbyUrl(url,username):
+    #Generate Qr image by an url
+    qrFileName='reportsCampana/qr'+username+".png"
+    qrcode=segno.make_qr(url)
+    qrcode.save(
+        qrFileName,
+        scale=10,
+        border=10
+    )
+    #Generate html interpreter
+    data_uri= base64.b64encode(open(qrFileName,'rb').read()).decode('utf-8')
+    img_tag='<img width="195" height="195" src="data:image/png;base64,{0}">'.format(data_uri)
+    return img_tag
+=======
         
 def qrGenerator(url,username):
     qr_data=url
@@ -159,3 +180,4 @@ def qrGenerator(url,username):
     #Save the image on reports
     img.save('reportsCampana/qr'+username+'.img')
     return img
+>>>>>>> b2021e40f97dea3d7e5a6bbfcdf39eb655617850
