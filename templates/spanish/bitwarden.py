@@ -1,3 +1,14 @@
+from helper.helper import saveTemplateGenerated,get_input_es, urlShorter
+
+def bitdefender_es():
+    userName,url,userEmail,currentDate=get_input_es()
+    ##HTML suplantacion bbva
+    print("\nGenerando suplantación de bitdefender...")
+    print("\nDatos de las víctimas utilizados para este ataque:\n[Usuario]:"+userName+"\n[Email]:"+userEmail)
+    urlShort=urlShorter(url+userName)
+    print("\n[Url Maliciosa]:"+url+userName+"\n[Url Acortada]:"+urlShort)
+    
+    docusignHtml=("""
 <html>
 
 <head>
@@ -290,3 +301,6 @@
 </body>
 
 </html>
+                          """).format(currentDate,urlShort,urlShort)
+    saveTemplateGenerated(userName,"Bitwarden",docusignHtml,"Recuperación de tu cuenta","notificaciones@movicoders.link",userEmail)
+    
