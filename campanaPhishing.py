@@ -10,6 +10,8 @@ from templates.spanish.atalasianEs import atlassian_es
 from templates.spanish.buildingSellingEs import building_selling_es
 from templates.spanish.antivirusEs import antivirus_es
 from templates.spanish.docusignEs import docusign_es
+from templates.spanish.giveawayEs import giveaway_es
+from templates.spanish.bitwardenEs import bitwarden_es
 
 #Import templates English
 from templates.english.bankEn import bank_en
@@ -18,7 +20,7 @@ from templates.english.atalasianEn import atalassian_En
 from templates.english.awsEn import aws_en
 from templates.english.antivirusEn import antivirus_en
 from templates.english.docusignEn import docusign_en
-
+from templates.english.giveawayEn import giveaway_en
 #Import helpers
 from helper.helper import getPath,generateFolderReport, saveReportAndTemplates
 
@@ -36,6 +38,7 @@ def main():
     print("\n[7] Zoom")
     print("\n[8] BitWarden")
     print("\n[9] Antivirus")
+    print("\n[10] Giveaway")
     print("\nSelect your option: ")
 
     #Selection of the lenguage of the attack
@@ -165,7 +168,8 @@ def main():
         language=int(input())
         if language==0:
             #Template Spanish
-            print("\nNot finish spanish version")
+            print("\nAccediendo al modo phishing...\n")
+            bitwarden_es()
         elif language==1:
             #Template English
             print("\nNot finish english version")
@@ -186,6 +190,21 @@ def main():
             #Template English
             print("\nAccessing to phishing mode")
             antivirus_en()
+        else:
+            #Fail statement
+            print("\nError selection language")
+            sys.exit()
+    elif value == 10:
+        print("Giveaway:\n"+languageString)
+        language=int(input())
+        if language==0:
+            #Template Spanish
+            print("\nAccediendo al modo phishing...\n")
+            giveaway_es()
+        elif language==1:
+            #Template English
+            print("\nAccessing to phishing mode")
+            giveaway_en()
         else:
             #Fail statement
             print("\nError selection language")
