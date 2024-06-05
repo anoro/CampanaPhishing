@@ -1,12 +1,12 @@
 # CampanaPhishing
 
-Open proyect for automatize the phishing campaigns attacks for organizations and intern campains
+Open project for automatize the phishing campaigns attacks for organizations and intern campaigns
 
 by Guillermo Anoro (ganoro)
 
 ## Legal Disclaimer
 
-I don´t make responsable of the uses of this tools, this tool is propared for Educational porpouses or to medium-small enterprises can use to make campaigns of phishing to train their employees
+I don´t make responsible of the uses of this tools, this tool is prepared for Educational proposes or to medium-small enterprises can use to make campaigns of phishing to train their employees
 
 ## Features
 
@@ -25,7 +25,7 @@ And developing...
 
 **Note** The application does not intend to use the brand image to steal information from the impersonated companies, remember that its use is internal for awareness purposes.
 
-Also the program will be able to recolect information from the users that are phished
+Also the program will be able to recollect information from the users that are phished
 - Name of the user
 - IP
 - Browser information
@@ -40,7 +40,7 @@ First Clone The Repository:
 ```bash
 git clone https://www.github.com/anoro/CampanaPhishing
 ```
-Then access to CampanaPhishing folder and provide permision to your user:
+Then access to CampanaPhishing folder and provide permission to your user:
 ```bash
 cd CampanaPhishing
 sudo chmod +x CampanaPhishing.py
@@ -53,6 +53,29 @@ python3 CampanaPhishing.py
 *In other terminal* to deploy the portal to access the victims and register it is need to have install Flask and deploy the app
 ```bash
 flask run --host=0.0.0.0
+```
+If you want to put the flask app in background for persistance:
+
+```bash
+nohup flask run --host=0.0.0.0 --port=5000 &
+```
+and close the terminal, the task will find it with, to close it:
+```bash
+ps aux | grep flask #get pid
+kill <pid>
+```
+
+- Docker
+
+For deploy persistance flask page with docker
+```bash
+sudo docker build . -t campanaphishing
+sudo docker run -p 5000:5000 -it campanaphishing
+```
+
+prune dockers
+```bash
+docker system prune
 ```
 
 Once the program will ask the following question:

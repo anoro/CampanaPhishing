@@ -11,7 +11,6 @@ from templates.spanish.buildingSellingEs import building_selling_es
 from templates.spanish.antivirusEs import antivirus_es
 from templates.spanish.docusignEs import docusign_es
 from templates.spanish.giveawayEs import giveaway_es
-from template.spanish.bitdefender import bitdefender_es
 
 #Import templates English
 from templates.english.bankEn import bank_en
@@ -150,7 +149,6 @@ def main():
             #Fail statement
             print("\nError selection language")
             sys.exit()
-    
     #Zoom template
     elif value == 7:
         print("Zoom:\n"+languageString)
@@ -158,34 +156,29 @@ def main():
         if language==0:
             #Template Spanish
             print("\nNot finish spanish version")
-
         elif language==1:
             #Template English
             print("\nNot finish english version")
-            
+            #AwsEn()
         else:
             #Fail statement
             print("\nError selection language")
             sys.exit()
-    
     #Bitwarden template
     elif value == 8:
         print("Bitwarden:\n"+languageString)
         language=int(input())
         if language==0:
             #Template Spanish
-            print("\nAccediendo al modo phishing...\n")
-            bitdefender_es()
-
+            print("\nNot finish spanish version")
         elif language==1:
             #Template English
             print("\nNot finish english version")
-            
+            #AwsEn()
         else:
             #Fail statement
             print("\nError selection language")
             sys.exit()
-    
     #Antivirus Template
     elif value == 9:
         print("Antivirus:\n"+languageString)
@@ -202,8 +195,6 @@ def main():
             #Fail statement
             print("\nError selection language")
             sys.exit()
-    
-    #Giveaway Template
     elif value == 10:
         print("Giveaway:\n"+languageString)
         language=int(input())

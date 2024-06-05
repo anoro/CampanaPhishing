@@ -11,7 +11,8 @@ paquetes_flask = [
     'click'
     'smtplib',
     'email',
-    'segno'
+    'segno',
+    'requests'
 ]
 
 # Instalación de paquetes
