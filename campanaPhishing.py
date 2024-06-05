@@ -11,6 +11,7 @@ from templates.spanish.buildingSellingEs import building_selling_es
 from templates.spanish.antivirusEs import antivirus_es
 from templates.spanish.docusignEs import docusign_es
 from templates.spanish.giveawayEs import giveaway_es
+from templates.spanish.bitwardenEs import bitwarden_es
 
 #Import templates English
 from templates.english.bankEn import bank_en
@@ -170,7 +171,8 @@ def main():
         language=int(input())
         if language==0:
             #Template Spanish
-            print("\nNot finish spanish version")
+            print("\nAccediendo al modo phishing...\n")
+            bitwarden_es()
         elif language==1:
             #Template English
             print("\nNot finish english version")
