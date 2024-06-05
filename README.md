@@ -10,16 +10,20 @@ I don´t make responsible of the uses of this tools, this tool is prepared for E
 
 ## Features
 
-The program is able to send this kind of phishing emails spoofing it
-
-- Banks
+The program is able to send this kind of phishing emails templates to spoofing:
+- Antivirus (BitDefender)
 - Atalassian
-- OneDrive/Office(Recovery/MFA-QR)
-- Zones to rent an office-
-- Adobe
+- Adobe (developing)
 - AWS
+- Banks
+- Bitwarden
 - DocuSign
-- Zoom
+- Giveaway Phishing
+- OneDrive/Office
+    - Recovery account
+    - MFA-QR
+- Zones to rent an office 
+- Zoom (developing)
 
 And developing...
 
