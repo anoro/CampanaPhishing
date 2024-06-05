@@ -23,9 +23,6 @@ from templates.english.docusignEn import docusign_en
 from helper.helper import getPath,generateFolderReport, saveReportAndTemplates
 
 #import flask for portal
-
-
-
 Version="0.1"
 
 def main():
