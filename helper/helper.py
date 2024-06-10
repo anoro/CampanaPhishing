@@ -112,13 +112,13 @@ def saveTemplateGenerated(userName,templateName,html,subjectEmail,emailAttacker,
 #Email sender
 def sendEmailToVictim(htmlTosend,subject, emailoftheatacker, emailofthevictim, starttls=True):
     # Create a secure connection with the SMTP server
-    with smtplib.SMTP('email-smtp.eu-west-1.amazonaws.com', 587) as server:
+    with smtplib.SMTP('smtp.sendgrid.net', 587) as server:
         print("\n Starting process to send the template selected to the victim\n")
         if starttls:
             server.starttls()
         
-        userSMTP="AKIAQKY5APLKTYGZWE6B" # set up with your user
-        passwordSMTP="BNeG8ph+q75AfmUQ/uXJjx9EWl3hEuV+EuWde+YZ6sT1" # Set up with your password
+        userSMTP="apikey" # set up with your user
+        passwordSMTP="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" # Set up with your password
         
         # Login with your email credentials
         server.login(userSMTP, passwordSMTP)
